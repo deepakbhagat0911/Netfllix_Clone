@@ -1,0 +1,111 @@
+.plan-logo img {
+  width: auto;
+  height: 40px;
+  padding: 10px;
+}
+.plan-head {
+  border-bottom: 1px solid #9b9b9b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+.plan-button button {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+.plan-button button:hover {
+  text-decoration: underline;
+}
+
+.upper-box p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.upper-box ul li {
+  line-height: 1.5;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  list-style: none;
+}
+.wraper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
+  width: 62%;
+  margin: 0 auto;
+}
+.register-container {
+  border: 1px solid #333;
+  height: max-content;
+  width: max-content;
+  margin: 50px auto;
+}
+.register-wraper {
+  display: flex;
+  justify-content: center;
+
+  margin: 30px auto;
+  gap: 30px;
+  padding: 10px 20px;
+}
+.inputBox img {
+  height: 30px;
+  width: 150px;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.flex h3 {
+  color: #333;
+}
+.inputBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.inputBox label {
+  font-size: 20px;
+  color: #333;
+}
+.inputBox input {
+  outline: none;
+  padding: 5px;
+  font-size: 18px;
+  color: #181818;
+}
+.payBtn {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.payBtn button {
+  background: none;
+  outline: none;
+  border: 1px solid #9d9d9d;
+  width: 20%;
+  background-color: #e50914;
+  padding: 10px 0;
+  color: #fff;
+  border-radius: 3px;
+}
+@media (max-width: 860px) {
+  .wraper {
+    gap: 30px;
+    padding: 5px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .register-wraper {
+    display: block;
+    justify-content: center;
+    margin: 30px auto;
+    gap: 10px;
+  }
+}

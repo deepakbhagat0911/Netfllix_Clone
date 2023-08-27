@@ -1,0 +1,29 @@
+.my-list-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+}
+.MY-LIST-DIV h2 {
+  padding: 20px;
+  margin-top: 15px;
+}
+.my-list-item {
+  text-align: center;
+  margin: 0 20px;
+}
+.my-list-item img {
+  width: 200px;
+  height: 250px;
+}
+.my-list-item p {
+  letter-spacing: 1px;
+}
+@media (max-width: 760px) {
+  .my-list-item img {
+    width: 150px;
+    height: 170px;
+  }
+}

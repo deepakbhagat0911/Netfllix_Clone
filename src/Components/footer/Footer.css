@@ -1,0 +1,28 @@
+.footer-content {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.f {
+  margin-top: 30px;
+  color: rgb(175, 175, 175);
+}
+.list-container ul li {
+  list-style: none;
+  line-height: 2;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.footer-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 760px) {
+  .footer-list {
+    display: block;
+  }
+  .list-container ul li {
+    line-height: 1.5;
+  }
+}

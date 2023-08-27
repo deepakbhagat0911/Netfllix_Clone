@@ -1,0 +1,32 @@
+.row-title div {
+  padding: 25px;
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.row-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.img-box img {
+  width: 95%;
+  height: 200px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+.img-box {
+  text-align: center;
+  color: #fff;
+}
+.img-box img:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 760px) {
+  .row-title div {
+    padding: 15px;
+    font-size: 1rem;
+    margin: 0 10px;
+  }
+}
