@@ -23,24 +23,18 @@ const Wraper = styled(Box)`
   }
 `;
 const InputBox = styled("input")`
+  margin-top: 30px;
   padding: 7px;
   outline: none;
   border: none;
 `;
-const PasswordBox = styled("div")`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-`;
+
 const LoginDialog = ({ open, setOpen }) => {
   const [values, setValue] = useState({
     name: "",
     email: "",
     password: "",
   });
-  const [showPassword, setShowPassword] = useState(false);
 
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -55,17 +49,24 @@ const LoginDialog = ({ open, setOpen }) => {
     setError("");
     await signInWithEmailAndPassword(auth, values.email, values.password)
       .then((res) => {
-        const user = res.user;
-
         handleClose();
         navigate("/main");
+        window.location.reload();
       })
       .catch((err) => {
-        setError(err.message);
-        console.log("error-", err.message);
+        if (err.code === "auth/invalid-email") {
+          setError("Invalid Email");
+          return;
+        } else if (err.code === "auth/wrong-password") {
+          setError("Invalid Password");
+          return;
+        } else if (err.code === "auth/user-not-found") {
+          setError("user not found");
+          return;
+        }
       });
   };
-  console.log(error);
+
   return (
     <Dialog open={open} onClose={handleClose}>
       <Component>
@@ -74,7 +75,6 @@ const LoginDialog = ({ open, setOpen }) => {
             Sign In
           </Typography>
           <InputBox
-            style={{ marginTop: "30px" }}
             type="text"
             placeholder="Email"
             name="email"
@@ -82,29 +82,15 @@ const LoginDialog = ({ open, setOpen }) => {
               setValue((prev) => ({ ...prev, email: e.target.value }))
             }
           />
-          <PasswordBox style={{ marginTop: "30px" }}>
-            <InputBox
-              type={showPassword ? "text" : "password"} // Toggle between "text" and "password"
-              name="password"
-              value={values.password}
-              placeholder="password"
-              onChange={(e) =>
-                setValue((prev) => ({ ...prev, password: e.target.value }))
-              }
-            ></InputBox>
-            <p
-              onClick={() => setShowPassword(!showPassword)}
-              style={{
-                color: "#333",
-                padding: "8.2px 12px",
-                background: "#fff",
-                fontSize: "12px",
-                cursor: "pointer",
-              }}
-            >
-              {showPassword ? "Hide" : "Show"}
-            </p>
-          </PasswordBox>
+
+          <InputBox
+            type="text" // Toggle between "text" and "password"
+            name="password"
+            placeholder="password"
+            onChange={(e) =>
+              setValue((prev) => ({ ...prev, password: e.target.value }))
+            }
+          ></InputBox>
 
           <b
             style={{

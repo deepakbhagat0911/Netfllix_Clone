@@ -55,7 +55,7 @@ export default function NavBar({ profile }) {
       <List>
         <ListItem disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
-            <ListItemText>Hello' {profile}</ListItemText>
+            <ListItemText>Hello, {profile}</ListItemText>
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -145,7 +145,7 @@ export default function NavBar({ profile }) {
               }}
             >
               <div className="logout-div">
-                <p>Hello' {profile}</p>
+                <p>Hello, {profile}</p>
                 <p onClick={handlelogout}>Log out</p>
               </div>
             </Drawer>

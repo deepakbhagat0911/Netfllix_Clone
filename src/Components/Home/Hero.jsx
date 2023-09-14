@@ -6,6 +6,12 @@ const Hero = () => {
     <>
       <div className="hero">
         <div className="hero-container">
+          <div className="hero-img">
+            <img
+              src="https://netflix-images.manikantp.repl.co/Netflix1.gif"
+              alt="image"
+            />
+          </div>
           <div className="hero-text">
             <h2>Enjoy on your TV</h2>
             <p>
@@ -14,11 +20,20 @@ const Hero = () => {
               <br /> players and more.
             </p>
           </div>
+        </div>
+      </div>
+
+      <div className="hero small-sreen">
+        <div className="hero-container">
+          <div className="hero-text">
+            <h2>Watch everywhere</h2>
+            <p>
+              Stream unlimited movies and TV shows on your <br />
+              phone, tablet, laptop, and TV.
+            </p>
+          </div>
           <div className="hero-img">
-            <img
-              src="https://netflix-images.manikantp.repl.co/Netflix1.gif"
-              alt="image"
-            />
+            <img src="./Hero_img/Hero3.jpg" alt="image" />
           </div>
         </div>
       </div>
@@ -39,21 +54,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="hero">
-        <div className="hero-container">
-          <div className="hero-text">
-            <h2>Watch everywhere</h2>
-            <p>
-              Stream unlimited movies and TV shows on your <br />
-              phone, tablet, laptop, and TV.
-            </p>
-          </div>
-          <div className="hero-img">
-            <img src="./Hero_img/Hero3.jpg" alt="image" />
-          </div>
-        </div>
-      </div>
-      <div className="hero">
+      <div className="hero small-sreen">
         <div className="hero-container">
           <div className="hero-img">
             <img src="./Hero_img/Hero4.png" alt="image" />

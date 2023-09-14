@@ -2,7 +2,7 @@ import React from "react";
 import "./banner.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
+import { Link } from "react-router-dom";
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -56,9 +56,11 @@ const BannerCard = () => {
         >
           {bannerData.map((image) => {
             return (
-              <div className="banner-img" key={image.id}>
-                <img src={image.cover} alt="" />
-              </div>
+              <Link to={`/video/${"64cffee700bad552e8dcd509"}`} key={image.id}>
+                <div className="banner-img">
+                  <img src={image.cover} alt="" />
+                </div>
+              </Link>
             );
           })}
         </Carousel>

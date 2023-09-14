@@ -28,7 +28,7 @@ const Row = ({ data, title, query }) => {
     const filteredData = data.filter((item) => item.type.includes(query));
     setFilterData(filteredData);
   }, [data, query]);
-  console.log(data);
+
   return (
     <>
       <div className="row-title">

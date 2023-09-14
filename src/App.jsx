@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home/Home";
@@ -11,18 +10,14 @@ import Subscription from "./Components/subscription/Subscription";
 import Registration from "./Components/subscription/Registration";
 import Search from "./Components/movieGrid/Search";
 import VideoPlayer from "./Components/VideoPlayer/VideoPlayer";
-import { auth } from "./firebase";
+
 const App = () => {
-  const [profile, setProfile] = useState("");
-  auth.onAuthStateChanged((user) => {
-    setProfile(user.displayName);
-  });
   return (
     <BrowserRouter>
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/main" element={<Main profile={profile} />} />
+          <Route path="/main" element={<Main />} />
           <Route path="/all" element={<AllShow />} />
           <Route path="/:id" element={<DetailView />} />
           <Route path="/list" element={<MyList />} />

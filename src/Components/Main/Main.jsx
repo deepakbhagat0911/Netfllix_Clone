@@ -6,13 +6,17 @@ import NavBar from "./NavBar";
 import BannerCard from "./Banner";
 import { auth } from "../../firebase";
 
-const Main = ({ profile }) => {
+const Main = () => {
   const { state, loading } = DataState();
-
+  const [profile, setProfile] = useState("");
   const products = state.products;
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  auth.onAuthStateChanged((user) => {
+    setProfile(user.displayName);
+  });
   return (
     <>
       <NavBar profile={profile} />

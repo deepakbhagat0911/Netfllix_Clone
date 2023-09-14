@@ -55,4 +55,7 @@
     text-align: center;
     gap: 0;
   }
+  .small-sreen {
+    display: none;
+  }
 }
