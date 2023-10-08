@@ -31,7 +31,7 @@ npm run dev
 <ul>
 <li>Open a web browser and navigate to http://localhost:3000.</li>
 <li>Sign up as a user or log in if you already have an account.</li>
-<li>Browse and search for movies and TV shows.</li>
+<!-- <li>Browse and search for movies and TV shows.</li> -->
 <li>Click on a title to start streaming in high-quality.</li>
 <li>Create and manage user profiles for personalized recommendations.</li>
 </ul>
